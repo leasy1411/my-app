@@ -1,10 +1,10 @@
 <div class="content" role="main">
   <h1>{{ appTitle }}</h1>
-  <div class="card">
-    <input name="title" [(ngModel)]="title" />
-    <input type="number" name="price" [(ngModel)]="price" />
-    <textarea name="description" [(ngModel)]="description"></textarea>
-    <input name="imgurl" [(ngModel)]="imgurl" />
+  <div class="card" style="padding: 20px; box-sizing: border-box;">
+    <input name="title" [(ngModel)]="title" placeholder="Название товара"/>
+    <input type="number" name="price" [(ngModel)]="price" placeholder="Цена в рублях"/>
+    <input name="imgurl" [(ngModel)]="imgurl" placeholder="URL изображения"/>
+    <textarea name="description" [(ngModel)]="description" placeholder="Описание"></textarea>
     <button (click)="addProduct(title, price, description, imgurl)">Добавить</button>
   </div>
   <div class="card" *ngFor="let p of products; index as i">

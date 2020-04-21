@@ -3,6 +3,7 @@ $font: 'Montserrat', sans-serif;
 $white: #FFF;
 $black: #000;
 $red: #C92F2F;
+$bg-color: #F1F1F1;
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap');
 
@@ -40,12 +41,12 @@ $red: #C92F2F;
     color: $white;
     font-size: 24px;
     box-shadow: none;
-    margin: 20px 0;
     border: none;
     box-shadow: 0 2px 4px transparentize($black, 0.75);
   }
   .remove {
     background-color: $red;
+    margin: 20px 0;
   }
   .card-img {
     width: 100%;
@@ -69,6 +70,35 @@ $red: #C92F2F;
     box-sizing: border-box;
     padding: 0 20px;
     text-align: justify;
+  }
+  input {
+    width: 100%;
+    margin-bottom: 20px;
+    height: 40px;
+    background-color: $bg-color;
+    border: 2px solid darken($bg-color, 5%);
+    border-radius: 5px;
+    padding: 0 10px;
+    box-sizing: border-box;
+    font-family: $font;
+    font-size: 18px;
+    outline: none;
+  }
+  textarea {
+    width: 100%;
+    margin-bottom: 20px;
+    height: 200px;
+    background-color: $bg-color;
+    border: 2px solid darken($bg-color, 5%);
+    border-radius: 5px;
+    padding: 10px;
+    box-sizing: border-box;
+    font-family: $font;
+    font-size: 18px;
+    outline: none;
+  }
+  input::placeholder, textarea::placeholder {
+    color: darken($bg-color, 15%);
   }
 }
 
