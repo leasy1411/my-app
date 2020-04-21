@@ -1,3 +1,8 @@
+$violet: #793AFE;
+$font: 'Montserrat', sans-serif;
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
 .content {
   display: flex;
   margin: 82px auto 32px;
@@ -5,4 +10,9 @@
   max-width: 960px;
   flex-direction: column;
   align-items: center;
+  font-family: $font;
+}
+
+h1::first-letter, h2::first-letter {
+  color: $violet;
 }
