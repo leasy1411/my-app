@@ -7,7 +7,11 @@ import { Component } from '@angular/core';
 })
 
 export class AppComponent {
-  appTitle = 'Kitty';
+  appTitle = 'Kitty'
+  products: Product[] = []
+  addProduct(title: string, price: number, description: string) {
+    this.products.push(new Product(title, price, description))
+  }
 }
 
 export class Product {
