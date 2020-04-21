@@ -23,4 +23,7 @@ export class AppComponent {
   addProduct(title: string, price: number, description: string) {
     this.products.push(new Product(title, price, description))
   }
+  removeProduct(index) {
+    this.products.splice(index, 1);
+  }
 }
