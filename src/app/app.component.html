@@ -1,14 +1,16 @@
 <div class="content" role="main">
   <h1>{{ appTitle }}</h1>
-  <input name="title" [(ngModel)]="title" />
-  <input type="number" name="price" [(ngModel)]="price" />
-  <textarea name="description" [(ngModel)]="description"></textarea>
-  <input name="imgurl" [(ngModel)]="imgurl" />
-  <button (click)="addProduct(title, price, description, imgurl)">Добавить</button>
-  <div>
-    <h3>Добавленные элементы</h3>
-    <ul *ngFor="let p of products; index as i">
-      <li>{{ p.title }} ({{ p.description }}) - {{ p.price }}   <a (click)="removeProduct(i)">х</a></li>
-    </ul>
+  <div class="card">
+    <input name="title" [(ngModel)]="title" />
+    <input type="number" name="price" [(ngModel)]="price" />
+    <textarea name="description" [(ngModel)]="description"></textarea>
+    <input name="imgurl" [(ngModel)]="imgurl" />
+    <button (click)="addProduct(title, price, description, imgurl)">Добавить</button>
+  </div>
+  <div class="card" *ngFor="let p of products; index as i">
+      <div class="card-img" style="background-image: url({{ p.imgurl }})"></div>
+      <div class="card-title"><div class="title">{{ p.title }}</div><div>{{ p.price }}<span>₽</span></div></div>
+      <div class="card-description">{{ p.description }}</div>
+      <button class="remove" (click)="removeProduct(i)">Убрать</button>
   </div>
 </div>
