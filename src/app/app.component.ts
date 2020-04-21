@@ -4,7 +4,8 @@ export class Product {
   constructor(
     public title: string,
     public price: number,
-    public description: string
+    public description: string,
+    public imgurl: string,
   ) {}
 }
 
@@ -19,9 +20,10 @@ export class AppComponent {
   title: string;
   price: number;
   description: string;
+  img: string;
   products: Product[] = [];
-  addProduct(title: string, price: number, description: string) {
-    this.products.push(new Product(title, price, description))
+  addProduct(title: string, price: number, description: string, imgurl: string) {
+    this.products.push(new Product(title, price, description, imgurl))
   }
   removeProduct(index) {
     this.products.splice(index, 1);

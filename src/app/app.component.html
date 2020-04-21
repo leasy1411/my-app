@@ -3,7 +3,8 @@
   <input name="title" [(ngModel)]="title" />
   <input type="number" name="price" [(ngModel)]="price" />
   <textarea name="description" [(ngModel)]="description"></textarea>
-  <button (click)="addProduct(title, price, description)">Добавить</button>
+  <input name="imgurl" [(ngModel)]="imgurl" />
+  <button (click)="addProduct(title, price, description, imgurl)">Добавить</button>
   <div>
     <h3>Добавленные элементы</h3>
     <ul *ngFor="let p of products; index as i">
