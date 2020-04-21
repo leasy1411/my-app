@@ -1,5 +1,13 @@
 import { Component } from '@angular/core';
 
+export class Product {
+  constructor(
+    public title: string,
+    public price: number,
+    public description: string
+  ) {}
+}
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -7,17 +15,12 @@ import { Component } from '@angular/core';
 })
 
 export class AppComponent {
-  appTitle = 'Kitty'
-  products: Product[] = []
+  appTitle = 'Kitty';
+  title: string;
+  price: number;
+  description: string;
+  products: Product[] = [];
   addProduct(title: string, price: number, description: string) {
     this.products.push(new Product(title, price, description))
   }
-}
-
-export class Product {
-  constructor(
-    public title: string,
-    public price: number,
-    public description: string
-  ) {}
 }
