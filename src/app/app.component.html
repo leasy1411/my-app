@@ -6,8 +6,8 @@
   <button (click)="addProduct(title, price, description)">Добавить</button>
   <div>
     <h3>Добавленные элементы</h3>
-    <ul *ngFor="let p of products">
-      <li>{{ p.title }} ({{ p.description }}) - {{ p.price }}</li>
+    <ul *ngFor="let p of products; index as i">
+      <li>{{ p.title }} ({{ p.description }}) - {{ p.price }}   <a (click)="removeProduct(i)">х</a></li>
     </ul>
   </div>
 </div>
