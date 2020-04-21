@@ -20,7 +20,7 @@ export class AppComponent {
   title: string;
   price: number;
   description: string;
-  img: string;
+  imgurl: string;
   products: Product[] = [
     {title: "Overwatch", price: 1999, description: "Overwatch — яркий командный шутер с разнообразным составом героев. Выбирайте своего героя, путешествуйте по миру, сражайтесь за объекты и ведите свою команду к победе.", imgurl: "https://img.gazeta.ru/files3/243/12967243/OVERWATCH-pic1300-1300x600-47493.jpg"}
   ];
